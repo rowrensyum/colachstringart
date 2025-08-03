@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="수열계산.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>콜라츠 추측</title>
+</head>
+<body>
+    <h1>콜라츠 추측</h1>
+    <input type=number id="입력값">
+    <button onclick="getValue()">확인</button>
+
+<script>
+function getValue() {
+    let value = document.getElementById("입력값").value;
+    if (value) {
+        window.location.href = "art.html?입력값=" + value;
+    }
+}
+</script>
+</body>
+</html>
