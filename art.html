@@ -9,8 +9,26 @@
 <body>
   <h1>스트링아트</h1>
   <canvas class="canvas" width="600" height="400">이 브라우저는 캔버스를 지원하지 않아요.</canvas>
-
+  <input id="nInput" type="number" />
+<button id="drawBtn">그리기</button>
+<canvas id="canvas" width="400" height="400"></canvas>
+<script>
+  document.getElementById('drawBtn').addEventListener('click', () => {
+    const n = parseInt(document.getElementById('nInput').value);
+    console.log('입력 n:', n);
+    drawStringArt(n);
+  });
+  function drawStringArt(n) {
+    if (!n || isNaN(n)) {
+      console.error('유효한 수가 아닙니다:', n);
+      return;
+    }
+    // 여기서 캔버스에 선을 그리는 로직 실행
+  }
+</script>
+ 
   <script>
+    /**
     const params = new URLSearchParams(window.location.search);
     const 입력값 = params.get('입력값') || 13;
 
@@ -29,7 +47,7 @@
       const x = 300 + Math.sin(라디안) * 160;
       const y = 200 + Math.cos(라디안) * 160;
       context.fillRect(x, y, 1, 1);
-    }
+    }**/
   </script>
 </body>
 </html>
